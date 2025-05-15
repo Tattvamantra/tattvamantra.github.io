@@ -126,12 +126,35 @@
 <section id="form-section">
   <h2>Book an Appointment</h2>
   <form onsubmit="submitForm(event)" style="background-color: #ffffff; padding: 20px; border-radius: 10px; max-width: 500px; margin: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    
+
     <label for="name"><b>Name:</b></label><br>
     <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 10px 0;"><br>
 
-    <label for="date"><b>Date:</b></label><br>
-    <input type="date" id="date" name="date" required style="width: 100%; padding: 10px; margin: 10px 0;"><br>
+    <label for="age"><b>Age (Date of Birth):</b></label><br>
+    <input type="date" id="age" name="age" max="" required style="width: 100%; padding: 10px; margin: 10px 0;"><br>
+
+    <label for="gender"><b>Gender:</b></label><br>
+    <select id="gender" name="gender" required style="width: 100%; padding: 10px; margin: 10px 0;">
+      <option value="">Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Prefer not to say">Prefer not to say</option>
+      <option value="Others">Others</option>
+    </select><br>
+
+    <label for="occupation"><b>Occupation:</b></label><br>
+    <select id="occupation" name="occupation" required style="width: 100%; padding: 10px; margin: 10px 0;">
+      <option value="">Select Occupation</option>
+      <option value="Pvt Employee">Pvt Employee</option>
+      <option value="Govt Employee">Govt Employee</option>
+      <option value="Business Person">Business Person</option>
+      <option value="Student">Student</option>
+      <option value="Homemaker">Homemaker</option>
+      <option value="Others">Others</option>
+    </select><br>
+
+    <label for="appointment"><b>Preferred Appointment Date:</b></label><br>
+    <input type="date" id="appointment" name="appointment" min="" required style="width: 100%; padding: 10px; margin: 10px 0;"><br>
 
     <label for="phone"><b>Mobile Number:</b></label><br>
     <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required style="width: 100%; padding: 10px; margin: 10px 0;"><br>
@@ -139,6 +162,22 @@
     <button type="submit" style="background-color: #008060; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px;">Submit</button>
   </form>
 </section>
+
+<script>
+  // Set date restrictions
+  window.onload = function() {
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById("age").setAttribute("max", today);
+    document.getElementById("appointment").setAttribute("min", today);
+  }
+
+  function submitForm(event) {
+    event.preventDefault();
+    alert("Your appointment request has been submitted!");
+    document.querySelector("form").reset();
+  }
+</script>
+
 
   <section id="about">
     <h2>About Tattva Mantra</h2>
