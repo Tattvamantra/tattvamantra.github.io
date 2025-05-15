@@ -119,8 +119,26 @@
       <h1>Holistic Wellness & Emotional Resilience</h1>
       <p>Blending modern psychology with compassionate care for lasting transformation</p>
       <a href="https://wa.me/917000122900?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation." target="_blank">Schedule Consultation</a>
+      <br><br>
+<a href="#form-section" style="background-color: #ffffff; color: #008060; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold;">Fill Form</a>
     </div>
   </section>
+<section id="form-section">
+  <h2>Book an Appointment</h2>
+  <form onsubmit="submitForm(event)" style="background-color: #ffffff; padding: 20px; border-radius: 10px; max-width: 500px; margin: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    
+    <label for="name"><b>Name:</b></label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 10px 0;"><br>
+
+    <label for="date"><b>Date:</b></label><br>
+    <input type="date" id="date" name="date" required style="width: 100%; padding: 10px; margin: 10px 0;"><br>
+
+    <label for="phone"><b>Mobile Number:</b></label><br>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required style="width: 100%; padding: 10px; margin: 10px 0;"><br>
+
+    <button type="submit" style="background-color: #008060; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px;">Submit</button>
+  </form>
+</section>
 
   <section id="about">
     <h2>About Tattva Mantra</h2>
@@ -143,6 +161,15 @@
   <a class="whatsapp-button" href="https://wa.me/917000122900?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation." target="_blank" title="Chat on WhatsApp">
     💬
   </a>
+<script>
+  function submitForm(event) {
+    event.preventDefault();
+    alert("Your appointment request has been submitted!");
+    document.getElementById("name").value = "";
+    document.getElementById("date").value = "";
+    document.getElementById("phone").value = "";
+  }
+</script>
 
 </body>
 </html>
