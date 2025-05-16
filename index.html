@@ -1,64 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tattva Mantra</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Merriweather', serif;
-      background-color: #f4fdf9;
+      background: url('bg.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #004d40;
     }
 
-    header {
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 30px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    nav {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 1rem;
+      text-align: center;
       position: sticky;
       top: 0;
-      z-index: 999;
-    }
-
-    header img {
-      height: 50px;
+      z-index: 1000;
     }
 
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #046c4e;
+      color: #004d40;
       font-weight: bold;
-      font-size: 16px;
+    }
+
+    .logo {
+      height: 50px;
+      vertical-align: middle;
+      margin-right: 10px;
     }
 
     .hero {
-      background-image: url('bg.jpeg');
-      background-size: cover;
-      background-position: center;
-      color: white;
       text-align: center;
-      padding: 150px 20px;
-      position: relative;
-    }
-
-    .hero::before {
-      content: "";
-      background: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      top: 0; left: 0;
-      right: 0; bottom: 0;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
+      padding: 120px 20px 80px;
+      background-color: rgba(255, 255, 255, 0.8);
     }
 
     .hero h1 {
@@ -71,86 +53,111 @@
       margin-bottom: 40px;
     }
 
-    .hero .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .hero a.button {
-      background-color: white;
-      color: #046c4e;
-      padding: 12px 25px;
-      border-radius: 30px;
-      font-weight: bold;
+    .hero a {
+      display: inline-block;
+      background-color: #004d40;
+      color: white;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 25px;
       text-decoration: none;
-      transition: background 0.3s;
+      font-size: 16px;
     }
 
-    .hero a.button:hover {
-      background-color: #c5f0e2;
-    }
-
-    /* WhatsApp Button */
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 1000;
+      z-index: 100;
     }
 
     .whatsapp-button img {
       width: 60px;
-      height: 60px;
     }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
+    footer {
+      background-color: rgba(255, 255, 255, 0.95);
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 60px;
     }
   </style>
 </head>
-<body>
-  <!-- Header -->
-  <header>
-    <img src="logo.jpg" alt="Tattva Mantra Logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="contact.html">Contact</a>
-      <a href="blog.html">Blog</a>
-      <a href="privacy.html">Privacy Policy</a>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to Tattva Mantra</h1>
-      <p>Blending modern psychology with compassionate care for lasting transformation.</p>
-      <div class="buttons">
-        <a class="button" href="https://wa.me/919999999999">Schedule Consultation</a>
-        <a class="button" href="form.html">Fill Form</a>
+<body>
+  <nav>
+    <img src="logo.jpg" alt="Tattva Mantra Logo" class="logo">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to Tattva Mantra</h1>
+    <p>Guiding You to Wellness, Clarity & Inner Peace</p>
+    <a href="form.html">Schedule Consultation</a>
+    <a href="form.html">Fill Appointment Form</a>
+  </div>
+
+  <!-- Why Tattva Mantra Section -->
+  <section style="padding: 60px 20px; text-align: center; font-family: 'Merriweather', serif;">
+    <h2 style="font-size: 32px; color: #004d40;">Why Tattva Mantra?</h2>
+    <p style="max-width: 700px; margin: 20px auto; font-size: 18px; color: #333;">
+      At Tattva Mantra, we blend ancient wisdom with modern therapy to help you heal emotionally, find purpose, and live with clarity.
+      Whether it's stress, relationships, or career decisions—we are here for you with heart, mind, and spirit.
+    </p>
+  </section>
+
+  <!-- Services Overview -->
+  <section style="background-color: #f5fdfc; padding: 60px 20px; text-align: center; font-family: 'Merriweather', serif;">
+    <h2 style="font-size: 32px; color: #004d40;">Our Services</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+      <div style="width: 250px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <h3 style="color: #00796b;">Emotional Wellness</h3>
+        <p style="font-size: 15px;">Therapy sessions to heal stress, anxiety, and emotional fatigue.</p>
+      </div>
+      <div style="width: 250px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <h3 style="color: #00796b;">Career Clarity</h3>
+        <p style="font-size: 15px;">Guidance for students and professionals to find fulfilling career paths.</p>
+      </div>
+      <div style="width: 250px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <h3 style="color: #00796b;">Mindfulness Practices</h3>
+        <p style="font-size: 15px;">Simple tools like journaling, meditation, and self-awareness exercises.</p>
       </div>
     </div>
   </section>
 
-  <!-- WhatsApp Button -->
-  <a class="whatsapp-button" href="https://wa.me/919999999999" target="_blank">
-    <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="Chat on WhatsApp">
-  </a>
-  <!-- Footer -->
-<footer style="background-color: #e0f2f1; padding: 20px 0; text-align: center; font-family: 'Merriweather', serif; font-size: 14px; color: #004d40;">
-    © 2025 Tattva Mantra. All rights reserved.
-</footer>
+  <!-- Testimonials Preview -->
+  <section style="padding: 60px 20px; background-color: #f0fefc; text-align: center; font-family: 'Merriweather', serif;">
+    <h2 style="font-size: 32px; color: #004d40;">What Clients Say</h2>
+    <blockquote style="font-style: italic; color: #444; max-width: 600px; margin: 30px auto;">
+      “Tattva Mantra helped me reconnect with myself during my darkest times. I’m forever grateful.”<br>— A Client
+    </blockquote>
+    <a href="testimonials.html" style="display: inline-block; margin-top: 20px; background-color: #00796b; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none;">Read More Testimonials</a>
+  </section>
 
+  <!-- Call to Action -->
+  <section style="padding: 40px 20px; text-align: center; font-family: 'Merriweather', serif;">
+    <h2 style="color: #004d40;">Ready to Begin?</h2>
+    <p style="font-size: 18px;">Start your healing journey with a one-on-one session.</p>
+    <a href="form.html" style="margin: 10px; display: inline-block; background-color: #004d40; color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none;">Book an Appointment</a>
+  </section>
+
+  <!-- WhatsApp Floating Button -->
+  <div class="whatsapp-button">
+    <a href="https://wa.me/919999999999" target="_blank">
+      <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp Chat">
+    </a>
+  </div>
+
+  <footer>
+    &copy; 2025 Tattva Mantra. All rights reserved.
+  </footer>
 </body>
+
 </html>
