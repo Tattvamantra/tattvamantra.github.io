@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Tattva Mantra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #e8fef5;
+      font-family: 'Lato', sans-serif;
       color: #333;
+      background-color: #e8fef5;
     }
     header {
+      background-color: #ffffffcc;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
-      background-color: #ffffff;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .logo {
@@ -33,26 +37,108 @@
       color: #333;
       font-weight: bold;
     }
+    .banner {
+      background: url('about.png') no-repeat center center/cover;
+      padding: 120px 20px;
+      text-align: center;
+      color: white;
+    }
+    .banner h1 {
+      font-size: 48px;
+      margin: 0 0 10px;
+    }
+    .banner p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .banner a {
+      background-color: #ffffff;
+      color: #008060;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
     section {
       padding: 50px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
     h2 {
       color: #008060;
       margin-bottom: 20px;
+      font-size: 28px;
+    }
+    .support-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 16px;
+    }
+    .support-icons div {
+      background-color: #ffffff;
+      padding: 20px;
+      flex: 1 1 120px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .approach {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .approach div {
+      background-color: #ffffff;
+      padding: 20px;
+      flex: 1 1 250px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .quote {
+      text-align: center;
+      font-style: italic;
+      font-size: 24px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .call-to-action {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .call-to-action a {
+      background-color: #008060;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
     }
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background-color: #25D366;
-      color: white;
       border-radius: 50%;
-      padding: 15px;
-      text-decoration: none;
-      font-size: 24px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+    .whatsapp-button img {
+      width: 30px;
+      height: 30px;
+    }
+    footer {
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 15px;
+      color: #666;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -67,24 +153,73 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a href="form.html">Book</a>
     </nav>
   </header>
 
+  <div class="banner">
+    <h1>About Tattva Mantra</h1>
+    <p>Your space to pause, reflect, and grow — one mindful conversation at a time.</p>
+    <a href="form.html">Start Your Journey</a>
+  </div>
+
   <section>
-    <h2>About Tattva Mantra</h2>
-    <p>
-      Tattva Mantra is a space for transformation, clarity, and emotional well-being. 
-      We offer therapy and counseling that combines modern psychology with the wisdom of holistic practices.
-    </p>
-    <p>
-      Whether you're feeling stuck, anxious, or simply seeking growth, we support your journey 
-      with compassion, presence, and purpose.
-    </p>
+    <h2>Who We Are</h2>
+    <p>Tattva Mantra is a nurturing space for self-reflection, emotional wellness, and healing. Our team blends modern therapeutic techniques with deep empathy and practical wisdom to support you on your path.</p>
+  </section>
+
+  <section>
+    <h2>Our Mission</h2>
+    <p>To provide a safe, compassionate, and insightful environment where individuals can find clarity, heal from within, and live with intention.</p>
+  </section>
+
+  <section>
+    <h2>Who We Support</h2>
+    <div class="support-icons">
+      <div>🎓 Students</div>
+      <div>👨‍💼 Working Professionals</div>
+      <div>🏛️ Government Employees</div>
+      <div>🧘‍♂️ Individuals & Families</div>
+      <div>🏢 Corporate Teams</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Our Experience</h2>
+    <p>With over 3 years of experience in emotional and mental well-being, we’ve worked with diverse individuals across sectors. Our focus is always on client-centered care.</p>
+  </section>
+
+  <section>
+    <h2>Our Approach</h2>
+    <div class="approach">
+      <div>💬 Empathetic Listening</div>
+      <div>🔒 Confidential Environment</div>
+      <div>🧭 Practical Guidance</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Wellness Programs for Institutions</h2>
+    <p>We collaborate with colleges, corporate teams, and government offices to bring mental wellness into the workplace through workshops, counseling, and training programs.</p>
+    <div class="call-to-action">
+      <a href="mailto:tattvamantra@gmail.com">Partner With Us</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="quote">“Healing begins when you feel heard.”<br><span style="font-size:16px;">– Tattva Mantra Team</span></div>
+    <div class="call-to-action">
+      <a href="form.html">Book a Session</a>
+    </div>
   </section>
 
   <a class="whatsapp-button" href="https://wa.me/917000122900?text=Hi%20I%20would%20like%20to%20connect" target="_blank" title="Chat on WhatsApp">
-    💬
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" />
   </a>
+
+  <footer>
+    &copy; 2025 Tattva Mantra. All rights reserved.
+  </footer>
 
 </body>
 </html>
