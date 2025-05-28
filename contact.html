@@ -1,504 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Tattva Mantra - Healing Begins Here</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Reach out to Tattva Mantra for emotional wellness, therapy sessions, or inquiries. We’re here to support you."/>
+  <title>Contact Us | Tattva Mantra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --soft-green: #e8f5e9;
-      --peach-blush: #ffebee;
-      --sage: #a5d6a7;
-      --deep-teal: #00897b;
-      --soft-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --primary: #a8d5ba;
+      --light-bg: #f9fdfb;
+      --text-dark: #333;
+      --accent: #5a9470;
+      --border-radius: 12px;
     }
-    
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, var(--soft-green), var(--peach-blush));
-      color: #333;
-      line-height: 1.7;
       margin: 0;
-      padding: 0;
-      min-height: 100vh;
+      font-family: 'Lato', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-dark);
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Header */
     header {
-      padding: 25px 0;
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: var(--soft-shadow);
-    }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      color: var(--deep-teal);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
-
-    .logo i {
-      margin-right: 10px;
-      font-size: 32px;
-    }
-
-    /* Hero Section */
-    .hero {
+      background-color: var(--primary);
+      padding: 20px 40px;
       text-align: center;
-      padding: 80px 0 60px;
-      background: linear-gradient(rgba(232, 245, 233, 0.8), rgba(255, 235, 238, 0.8));
     }
 
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      color: var(--deep-teal);
-      margin-bottom: 20px;
-      font-weight: 500;
+    header h1 {
+      font-family: 'Merriweather', serif;
+      margin: 0;
+      font-size: 2.5rem;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      color: #555;
-    }
-
-    .hero .subtext {
-      font-style: italic;
-      color: var(--deep-teal);
-      font-size: 1rem;
-    }
-
-    /* Main Content */
-    .contact-container {
-      display: flex;
-      gap: 40px;
-      padding: 40px 0 80px;
-    }
-
-    /* Contact Form */
-    .contact-form {
-      flex: 1;
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: var(--soft-shadow);
-    }
-
-    .form-group {
-      margin-bottom: 25px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 500;
-      color: #444;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-family: 'Poppins', sans-serif;
-      transition: all 0.3s ease;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--sage);
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(165, 214, 167, 0.3);
-    }
-
-    .form-group textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    .checkbox-group {
-      display: flex;
-      gap: 20px;
+    nav {
       margin-top: 10px;
     }
 
-    .checkbox-option {
+    nav a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-section {
       display: flex;
+      flex-wrap: wrap;
+      padding: 50px 10%;
       align-items: center;
+      gap: 40px;
     }
 
-    .checkbox-option input {
-      width: auto;
-      margin-right: 8px;
+    .contact-image {
+      flex: 1;
+      min-width: 280px;
     }
 
-    .submit-btn {
-      background: var(--deep-teal);
-      color: white;
-      border: none;
-      padding: 14px 28px;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 500;
-      transition: all 0.3s ease;
+    .contact-image img {
       width: 100%;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .submit-btn:hover {
-      background: #00796b;
-      transform: translateY(-2px);
-    }
-
-    /* Contact Info */
     .contact-info {
       flex: 1;
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: var(--soft-shadow);
+      min-width: 280px;
     }
 
     .contact-info h2 {
-      font-family: 'Playfair Display', serif;
-      color: var(--deep-teal);
-      margin-bottom: 25px;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 20px;
     }
 
-    .info-item {
-      display: flex;
-      margin-bottom: 25px;
+    .info-block {
+      margin-bottom: 20px;
     }
 
-    .info-icon {
-      font-size: 24px;
-      color: var(--deep-teal);
-      margin-right: 15px;
-      width: 30px;
-      text-align: center;
-    }
-
-    .info-content h3 {
-      margin: 0 0 5px;
+    .info-block span {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
       font-size: 1.1rem;
     }
 
-    .info-content p {
+    .info-block span::before {
+      margin-right: 8px;
+    }
+
+    .info-block.phone span::before {
+      content: "📞";
+    }
+
+    .info-block.email span::before {
+      content: "📧";
+    }
+
+    .info-block.emergency span::before {
+      content: "🚨";
+    }
+
+    .info-block p {
       margin: 0;
-      color: #555;
+      font-size: 1rem;
     }
 
-    .emergency {
-      color: #e53935;
-      font-weight: 500;
+    .contact-form {
+      margin-top: 30px;
     }
 
-    /* Booking CTA */
-    .booking-cta {
-      text-align: center;
-      margin: 40px 0;
+    .contact-form h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
     }
 
-    .booking-cta h2 {
-      font-family: 'Playfair Display', serif;
-      color: var(--deep-teal);
-      margin-bottom: 15px;
+    form {
+      display: flex;
+      flex-direction: column;
     }
 
-    .booking-btn {
-      background: var(--sage);
+    input, textarea {
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: var(--accent);
       color: white;
       border: none;
-      padding: 14px 28px;
+      padding: 12px;
+      border-radius: var(--border-radius);
       font-size: 1rem;
-      border-radius: 8px;
       cursor: pointer;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+      transition: background 0.3s ease;
     }
 
-    .booking-btn:hover {
-      background: #81c784;
-      transform: translateY(-2px);
+    button:hover {
+      background-color: #497a5e;
     }
 
-    /* Peaceful Visual */
-    .peaceful-visual {
+    .success-message {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+      display: none;
+    }
+
+    footer {
       text-align: center;
-      margin: 60px 0;
-      padding: 40px 0;
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      background-color: var(--primary);
+      color: #333;
+      margin-top: 50px;
     }
 
-    .peaceful-visual img {
-      max-width: 200px;
-      opacity: 0.8;
-    }
-
-    .peaceful-visual p {
-      font-style: italic;
-      color: var(--deep-teal);
-      font-size: 1.2rem;
-      margin-top: 20px;
-      font-family: 'Playfair Display', serif;
-    }
-
-    /* WhatsApp Button */
-    .whatsapp-btn {
+    .whatsapp-button {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #25D366;
-      color: white;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp-button a img {
       width: 60px;
       height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      transition: all 0.3s ease;
-      z-index: 100;
-      text-decoration: none;
     }
 
-    .whatsapp-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .whatsapp-tooltip {
-      position: absolute;
-      right: 70px;
-      background: white;
-      color: #333;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-size: 14px;
-      white-space: nowrap;
-      box-shadow: var(--soft-shadow);
-      opacity: 0;
-      transition: all 0.3s ease;
-    }
-
-    .whatsapp-btn:hover .whatsapp-tooltip {
-      opacity: 1;
-      right: 80px;
-    }
-
-    /* Footer */
-    footer {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 25px 0;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
-      .contact-container {
+      .contact-section {
         flex-direction: column;
-      }
-      
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      
-      .hero p {
-        font-size: 1rem;
+        padding: 30px 5%;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="container">
-      <a href="index.html" class="logo">
-        <i class="fas fa-spa"></i> Tattva Mantra
-      </a>
-    </div>
+    <h1>Contact Us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="form.html">Book Session</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Let's Connect. Your journey starts here.</h1>
-      <p>Whether you have questions or you're ready to begin—we're here to listen.</p>
-      <p class="subtext">Reach out and we'll get back to you within 24 hours.</p>
+  <section class="contact-section">
+    <div class="contact-image">
+      <img src="shant.png" alt="Calming image"/>
+    </div>
+
+    <div class="contact-info">
+      <h2>We’re here for you 🤍</h2>
+      <p>Whether you're looking to begin therapy, need guidance, or have questions, don't hesitate to reach out. We’ll respond with warmth and care.</p>
+
+      <div class="info-block phone">
+        <span>Call Us</span>
+        <p><a href="tel:+917000122900">+91 70001 22900</a></p>
+      </div>
+
+      <div class="info-block email">
+        <span>Email</span>
+        <p><a href="mailto:kaivalya.yours@gmail.com">kaivalya.yours@gmail.com</a></p>
+      </div>
+
+      <div class="info-block emergency">
+        <span>Emergency Support</span>
+        <p>If you're in crisis, please contact local mental health services or helplines for immediate support.</p>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send us a message 💌</h3>
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required />
+          <input type="email" name="Email" placeholder="Your Email" required />
+          <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Submit</button>
+          <p class="success-message" id="successMsg">✅ Thank you, we’ll get back soon!</p>
+        </form>
+      </div>
     </div>
   </section>
 
-  <div class="container">
-    <div class="contact-container">
-      <!-- Contact Form -->
-      <div class="contact-form">
-        <form id="contactForm">
-          <div class="form-group">
-            <label for="name">Full Name (Required)</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email Address (Required)</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="phone">Phone Number (Optional)</label>
-            <input type="tel" id="phone" name="phone">
-          </div>
-          
-          <div class="form-group">
-            <label for="service">Type of Counseling Needed</label>
-            <select id="service" name="service">
-              <option value="">Select an option</option>
-              <option value="emotional">Emotional Therapy</option>
-              <option value="career">Career Guidance</option>
-              <option value="holistic">Holistic Healing</option>
-              <option value="general">General Inquiry</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label>Preferred Mode of Session</label>
-            <div class="checkbox-group">
-              <div class="checkbox-option">
-                <input type="checkbox" id="online" name="mode" value="online">
-                <label for="online">Online</label>
-              </div>
-              <div class="checkbox-option">
-                <input type="checkbox" id="inperson" name="mode" value="inperson">
-                <label for="inperson">In-Person</label>
-              </div>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Message / Query</label>
-            <textarea id="message" name="message"></textarea>
-          </div>
-          
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-      </div>
-      
-      <!-- Contact Information -->
-      <div class="contact-info">
-        <h2>Our Contact Details</h2>
-        
-        <div class="info-item">
-          <div class="info-icon">
-            <i class="fas fa-phone-alt"></i>
-          </div>
-          <div class="info-content">
-            <h3>Phone</h3>
-            <p>+91-7000122900</p>
-          </div>
-        </div>
-        
-        <div class="info-item">
-          <div class="info-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="info-content">
-            <h3>Email</h3>
-            <p>kaivalya.yours@gmail.com</p>
-          </div>
-        </div>
-        
-        <div class="info-item">
-          <div class="info-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div class="info-content">
-            <h3>Location</h3>
-            <p>Bhopal, India<br><em>Online sessions available worldwide</em></p>
-          </div>
-        </div>
-        
-        <div class="info-item">
-          <div class="info-icon">
-            <i class="fas fa-clock"></i>
-          </div>
-          <div class="info-content">
-            <h3>Working Hours</h3>
-            <p>Mon–Sat | 10:00 AM – 7:00 PM IST</p>
-            <p class="emergency">Emergency support 24*7</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Booking CTA -->
-    <div class="booking-cta">
-      <h2>Prefer to book directly?</h2>
-      <button class="booking-btn">
-        <i class="far fa-calendar-alt"></i> Schedule Your Session
-      </button>
-    </div>
-    
-    <!-- Peaceful Visual -->
-    <div class="peaceful-visual">
-      <img src="https://cdn-icons-png.flaticon.com/512/2734/2734824.png" alt="Peaceful therapy illustration">
-      <p>"Healing begins the moment you feel heard. Let's begin."</p>
-    </div>
+  <div class="whatsapp-button">
+    <a href="https://wa.me/917000122900" target="_blank" aria-label="Chat on WhatsApp">
+      <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp Chat">
+    </a>
   </div>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/917000122900" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-    <span class="whatsapp-tooltip">Need help? Chat with us now</span>
-  </a>
-
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Tattva Mantra. All rights reserved.</p>
-    </div>
+    &copy; 2025 Tattva Mantra | All rights reserved.
   </footer>
 
+  <!-- Script to handle form submission -->
   <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxZPcpA0SvzO2JeDF6SEePcMZr_eU2X9HRQ7mGVtWesRMIY8uHBPdn4NsFclozgbThk/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const successMsg = document.getElementById('successMsg');
+
+    form.addEventListener('submit', e => {
       e.preventDefault();
-      
-      // Show loading state
-      const submitBtn = this.querySelector('button[type="submit"]');
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-      submitBtn.disabled = true;
-      
-      // Simulate form submission
-      setTimeout(() => {
-        submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent';
-        setTimeout(() => {
-          submitBtn.innerHTML = 'Send Message';
-          submitBtn.disabled = false;
-          this.reset();
-          alert('Thank you for your message. We will contact you within 24 hours.');
-        }, 1500);
-      }, 2000);
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          successMsg.style.display = 'block';
+          form.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
     });
   </script>
+
 </body>
 </html>
