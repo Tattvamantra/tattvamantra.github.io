@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Reach out to Tattva Mantra for emotional wellness, therapy sessions, or inquiries. We’re here to support you."/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reach out to Tattva Mantra for emotional wellness, therapy sessions, or inquiries. We're here to support you.">
   <title>Contact Us | Tattva Mantra</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --primary: #a8d5ba;
+      --primary-dark: #5a9470;
       --light-bg: #f9fdfb;
       --text-dark: #333;
+      --text-light: #555;
       --accent: #5a9470;
       --border-radius: 12px;
+      --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s ease;
     }
 
     body {
@@ -20,100 +27,143 @@
       font-family: 'Lato', sans-serif;
       background-color: var(--light-bg);
       color: var(--text-dark);
+      line-height: 1.6;
     }
 
     header {
-      background-color: var(--primary);
-      padding: 20px 40px;
+      background-color: white;
+      padding: 25px 40px;
       text-align: center;
+      box-shadow: var(--box-shadow);
     }
 
     header h1 {
       font-family: 'Merriweather', serif;
       margin: 0;
       font-size: 2.5rem;
+      color: var(--primary-dark);
+      letter-spacing: -0.5px;
     }
 
     nav {
-      margin-top: 10px;
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
     nav a {
-      margin: 0 15px;
-      color: #333;
+      color: var(--text-dark);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      padding: 8px 15px;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+    }
+
+    nav a:hover {
+      background-color: var(--primary);
+      color: white;
     }
 
     .contact-section {
       display: flex;
       flex-wrap: wrap;
-      padding: 50px 10%;
+      padding: 60px 10%;
       align-items: center;
-      gap: 40px;
+      gap: 60px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .contact-image {
       flex: 1;
-      min-width: 280px;
+      min-width: 300px;
+      position: relative;
     }
 
     .contact-image img {
       width: 100%;
       border-radius: var(--border-radius);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+    }
+
+    .contact-image:hover img {
+      transform: translateY(-5px);
     }
 
     .contact-info {
       flex: 1;
-      min-width: 280px;
+      min-width: 300px;
     }
 
     .contact-info h2 {
-      font-size: 2rem;
-      color: var(--accent);
+      font-family: 'Merriweather', serif;
+      font-size: 2.2rem;
+      color: var(--primary-dark);
       margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .contact-info > p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 30px;
     }
 
     .info-block {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      padding: 20px;
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+    }
+
+    .info-block:hover {
+      transform: translateX(5px);
     }
 
     .info-block span {
-      display: block;
-      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
       font-weight: bold;
       font-size: 1.1rem;
-    }
-
-    .info-block span::before {
-      margin-right: 8px;
-    }
-
-    .info-block.phone span::before {
-      content: "📞";
-    }
-
-    .info-block.email span::before {
-      content: "📧";
-    }
-
-    .info-block.emergency span::before {
-      content: "🚨";
+      color: var(--primary-dark);
     }
 
     .info-block p {
       margin: 0;
       font-size: 1rem;
+      color: var(--text-light);
+    }
+
+    .info-block a {
+      color: var(--primary-dark);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .info-block a:hover {
+      text-decoration: underline;
     }
 
     .contact-form {
-      margin-top: 30px;
+      margin-top: 40px;
+      background: white;
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
     }
 
     .contact-form h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+      font-family: 'Merriweather', serif;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: var(--primary-dark);
     }
 
     form {
@@ -122,59 +172,143 @@
     }
 
     input, textarea {
-      padding: 12px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
+      padding: 14px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
       border-radius: var(--border-radius);
       font-size: 1rem;
+      font-family: 'Lato', sans-serif;
+      transition: var(--transition);
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(168, 213, 186, 0.3);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
     }
 
     button {
-      background-color: var(--accent);
+      background-color: var(--primary-dark);
       color: white;
       border: none;
-      padding: 12px;
+      padding: 14px;
       border-radius: var(--border-radius);
       font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: var(--transition);
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
 
     button:hover {
       background-color: #497a5e;
+      transform: translateY(-2px);
     }
 
     .success-message {
-      color: green;
+      color: #2e7d32;
       font-weight: bold;
-      margin-top: 10px;
+      margin-top: 15px;
       display: none;
+      text-align: center;
+      padding: 10px;
+      background: #e8f5e9;
+      border-radius: var(--border-radius);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: var(--primary);
-      color: #333;
-      margin-top: 50px;
+      padding: 25px;
+      background-color: var(--primary-dark);
+      color: white;
+      margin-top: 60px;
     }
 
     .whatsapp-button {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 30px;
+      right: 30px;
       z-index: 1000;
+      transition: var(--transition);
     }
 
-    .whatsapp-button a img {
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-button a {
+      display: block;
+      position: relative;
+    }
+
+    .whatsapp-button img {
       width: 60px;
       height: 60px;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    }
+
+    .whatsapp-tooltip {
+      position: absolute;
+      right: 70px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: white;
+      color: var(--text-dark);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      white-space: nowrap;
+      box-shadow: var(--box-shadow);
+      opacity: 0;
+      transition: var(--transition);
+      pointer-events: none;
+    }
+
+    .whatsapp-button:hover .whatsapp-tooltip {
+      opacity: 1;
+      right: 80px;
     }
 
     @media (max-width: 768px) {
+      header {
+        padding: 20px;
+      }
+      
+      header h1 {
+        font-size: 2rem;
+      }
+      
       .contact-section {
-        flex-direction: column;
-        padding: 30px 5%;
+        padding: 40px 5%;
+        gap: 40px;
+      }
+      
+      .contact-info h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        gap: 10px;
+      }
+      
+      nav a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+      }
+      
+      .contact-form {
+        padding: 20px;
       }
     }
   </style>
@@ -193,44 +327,49 @@
 
   <section class="contact-section">
     <div class="contact-image">
-      <img src="shant.png" alt="Calming image"/>
+      <img src="shant.png" alt="Calming therapy session illustration"/>
     </div>
 
     <div class="contact-info">
-      <h2>We’re here for you 🤍</h2>
-      <p>Whether you're looking to begin therapy, need guidance, or have questions, don't hesitate to reach out. We’ll respond with warmth and care.</p>
+      <h2>We're here for you <span style="color: #ff6b6b;">♥</span></h2>
+      <p>Whether you're looking to begin therapy, need guidance, or have questions, don't hesitate to reach out. We'll respond with warmth and care within 24 hours.</p>
 
-      <div class="info-block phone">
-        <span>Call Us</span>
+      <div class="info-block">
+        <span><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> Call Us</span>
         <p><a href="tel:+917000122900">+91 70001 22900</a></p>
       </div>
 
-      <div class="info-block email">
-        <span>Email</span>
+      <div class="info-block">
+        <span><i class="fas fa-envelope" style="margin-right: 10px;"></i> Email</span>
         <p><a href="mailto:kaivalya.yours@gmail.com">kaivalya.yours@gmail.com</a></p>
       </div>
 
-      <div class="info-block emergency">
-        <span>Emergency Support</span>
-        <p>If you're in crisis, please contact local mental health services or helplines for immediate support.</p>
+      <div class="info-block">
+        <span><i class="fas fa-exclamation-triangle" style="margin-right: 10px; color: #e53935;"></i> Emergency Support</span>
+        <p>If you're in crisis, please contact local mental health services or call emergency helplines for immediate support.</p>
       </div>
 
       <div class="contact-form">
-        <h3>Send us a message 💌</h3>
+        <h3>Send us a message <i class="fas fa-paper-plane" style="color: #ff6b6b;"></i></h3>
         <form name="submit-to-google-sheet">
-          <input type="text" name="Name" placeholder="Your Name" required />
-          <input type="email" name="Email" placeholder="Your Email" required />
-          <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Submit</button>
-          <p class="success-message" id="successMsg">✅ Thank you, we’ll get back soon!</p>
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" placeholder="How can we help you?" required></textarea>
+          <button type="submit">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p class="success-message" id="successMsg">
+            <i class="fas fa-check-circle"></i> Thank you! We'll get back to you soon.
+          </p>
         </form>
       </div>
     </div>
   </section>
 
   <div class="whatsapp-button">
-    <a href="https://wa.me/917000122900" target="_blank" aria-label="Chat on WhatsApp">
-      <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp Chat">
+    <a href="https://wa.me/917000122900" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp Chat" width="60" height="60">
+      <span class="whatsapp-tooltip">Need help? Chat with us</span>
     </a>
   </div>
 
@@ -238,7 +377,6 @@
     &copy; 2025 Tattva Mantra | All rights reserved.
   </footer>
 
-  <!-- Script to handle form submission -->
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxZPcpA0SvzO2JeDF6SEePcMZr_eU2X9HRQ7mGVtWesRMIY8uHBPdn4NsFclozgbThk/exec';
     const form = document.forms['submit-to-google-sheet'];
@@ -246,12 +384,33 @@
 
     form.addEventListener('submit', e => {
       e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.innerHTML;
+      
+      // Show loading state
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      submitBtn.disabled = true;
+      
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
           successMsg.style.display = 'block';
           form.reset();
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.disabled = false;
+          
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            successMsg.style.display = 'none';
+          }, 5000);
         })
-        .catch(error => console.error('Error!', error.message));
+        .catch(error => {
+          console.error('Error!', error.message);
+          submitBtn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Try Again';
+          setTimeout(() => {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+          }, 2000);
+        });
     });
   </script>
 
