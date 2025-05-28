@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tattva Mantra offers personalized emotional therapy, career guidance, and holistic healing with science and wisdom. Start your journey today!" />
+  <title>Our Services | Tattva Mantra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Lato&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brand: #a8d5ba;
+      --accent: #2c6e49;
+      --cta: #4a8e5e;
+      --light-bg: #f9f9f9;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      background-color: var(--light-bg);
+    }
+
+    header {
+      background-color: var(--brand);
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Merriweather', serif;
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--accent);
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent);
+    }
+
+    .section {
+      margin: 40px 0;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--cta);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .cta-button:hover {
+      background-color: #3a704b;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    ul li::before {
+      content: "🌿 ";
+      color: var(--cta);
+    }
+
+    .testimonial {
+      font-style: italic;
+      color: #555;
+      border-left: 3px solid var(--cta);
+      padding-left: 15px;
+      margin: 20px 0;
+    }
+
+    .divider {
+      border-top: 1px solid #ddd;
+      margin: 20px 0;
+    }
+
+    footer {
+      background-color: #e8f5e9;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+
+    .whatsapp-button img {
+      height: 60px;
+      width: 60px;
+    }
+
+    .wooden-block {
+      background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+      background-size: cover;
+      padding: 30px;
+      text-align: center;
+      font-family: 'Merriweather', serif;
+      color: #3e2c1c;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    .grass-bg {
+      background: url('https://www.transparenttextures.com/patterns/grass.png');
+      background-size: cover;
+      padding: 20px;
+      border-radius: 10px;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .section {
+        padding: 15px;
+      }
+
+      .main-content {
+        padding: 15px;
+      }
+
+      h2 {
+        font-size: 1.4em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Tattva Mantra</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="form.html">Book Session</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/917000122900" class="whatsapp-button" aria-label="Chat on WhatsApp">
+    <img src="https://web.whatsapp.com/img/favicon/1x/favicon.png" alt="WhatsApp Chat Button">
+  </a>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="wooden-block">
+      <h1>Transform Your Mind, Body, and Purpose</h1>
+    </div>
+    <div class="grass-bg">
+      <p>Feeling stuck, overwhelmed, or unsure of your path? At Tattva Mantra, we guide you toward deep healing, clarity, and purpose with personalized, science-backed support.</p>
+    </div>
+
+    <div class="section">
+      <h2>🌿 Emotional Therapy</h2>
+      <p>Find peace within and reclaim your calm. Our 60-minute one-on-one emotional therapy sessions help you navigate anxiety, depression, stress, or emotional overwhelm. Using a compassionate blend of talk therapy, mindfulness, and neuroscience-backed tools, we create a safe, non-judgmental space for you to heal and grow.</p>
+      <p><strong>Perfect for:</strong> Those seeking to release emotional burdens and rediscover inner calm.</p>
+      <a href="emotional-therapy.html" class="cta-button">Start Healing Today</a>
+    </div>
+
+    <div class="section">
+      <h2>🎯 Career Guidance</h2>
+      <p>Design a career that lights you up. In today’s fast-evolving job market, feeling lost is normal. Our expert-led sessions, guided by researchers and mental health professionals, offer clear, step-by-step strategies to align your career with your purpose and potential.</p>
+      <p><strong>Perfect for:</strong> Professionals navigating job uncertainty or seeking meaningful work.</p>
+      <a href="career-guidance.html" class="cta-button">Find Your Path Today</a>
+    </div>
+
+    <div class="section">
+      <h2>🧘 Holistic Healing</h2>
+      <p>Restore balance to your body, mind, and spirit. Our holistic healing sessions combine guided meditation, breathwork, and energy-based practices—rooted in both science and ancient wisdom—to help you find clarity, grounding, and wholeness.</p>
+      <p><strong>Perfect for:</strong> Anyone seeking emotional clarity, spiritual awakening, or a sense of balance.</p>
+      <a href="holistic-healing.html" class="cta-button">Explore Holistic Healing</a>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <h2>💡 Why Choose Tattva Mantra?</h2>
+      <p>You’re not just a client—you’re a unique individual with a story we’re here to honor. Here’s what sets us apart:</p>
+      <ul>
+        <li>Experts trained at top global universities </li>
+        <li>Science-backed neuroscience paired with ancient meditative wisdom</li>
+        <li>Fully personalized sessions—no templates, no assumptions</li>
+        <li>Flexible online or in-person sessions in a warm, safe space</li>
+      </ul>
+      <p class="testimonial">“Tattva Mantra helped me find peace and purpose I thought were out of reach.” – Sarah, Client</p>
+    </div>
+
+    <div class="section">
+      <h2>🌟 Start Your Journey Today</h2>
+      <p>Ready to find clarity, balance, or purpose? Take the first step with a <strong>free 15-minute consultation</strong>. No commitment—just a conversation to explore what’s possible.</p>
+      <a href="form.html" class="cta-button">Schedule Your Free Consultation</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Tattva Mantra. All rights reserved. | Made with 🌱 for your healing journey.
+  </footer>
+</body>
+</html>
