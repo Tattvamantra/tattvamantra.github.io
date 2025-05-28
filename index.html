@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Tattva Mantra offers holistic wellness, emotional therapy, and career guidance to help you grow with clarity and compassion.">
   <title>Tattva Mantra | Holistic Wellness & Counseling</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <style>
+    :root {
+      --primary-color: #004d40;
+      --accent-color: #25D366;
+      --background-color: #e8fef5;
+      --text-dark: #00332e;
+      --text-light: #ffffff;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -15,8 +29,8 @@
 
     body {
       font-family: 'Merriweather', serif;
-      color: #00332e;
-      background-color: #e8fef5;
+      background-color: var(--background-color);
+      color: var(--text-dark);
     }
 
     header {
@@ -44,13 +58,18 @@
     nav a {
       margin-left: 20px;
       text-decoration: none;
-      color: #004d40;
+      color: var(--primary-color);
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
     }
 
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('bg.jpeg') center/cover no-repeat;
-      color: white;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bg.jpeg') center/cover no-repeat;
+      color: var(--text-light);
       text-align: center;
       padding: 120px 20px 100px;
     }
@@ -70,36 +89,76 @@
       margin-top: 30px;
     }
 
-    .hero a {
+    .btn {
       display: inline-block;
-      background-color: #25D366;
+      background-color: var(--accent-color);
       color: white;
       padding: 12px 25px;
       margin: 10px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn.secondary {
+      background-color: white;
+      color: var(--primary-color);
+    }
+
+    .btn:hover {
+      background-color: var(--primary-color);
+      color: white;
     }
 
     section {
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
-      background-color: #e8fef5; /* solid light background */
     }
 
     section h2 {
-      color: #008060;
+      color: var(--primary-color);
       text-align: center;
       margin-bottom: 30px;
     }
 
-    .service, .testimonial {
-      margin-bottom: 25px;
-      background-color: #ffffff;
-      padding: 20px;
-      border-left: 5px solid #25D366;
+    .intro p {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .service-card {
+      background-color: white;
       border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      border-left: 5px solid var(--accent-color);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h3 a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .service-card h3 a:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    .testimonial {
+      background-color: white;
+      padding: 20px;
+      border-left: 5px solid var(--accent-color);
+      border-radius: 8px;
+      margin-bottom: 20px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
@@ -107,31 +166,29 @@
       text-align: center;
     }
 
-    .cta a {
-      background-color: #008060;
-      color: white;
-      padding: 12px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 1em;
-      font-weight: bold;
-    }
-
     footer {
-      background-color: #004d40;
+      background-color: var(--primary-color);
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       font-size: 14px;
     }
 
-   .whatsapp-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
 
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-button img {
+      width: 60px;
+      height: 60px;
     }
 
     @media (max-width: 768px) {
@@ -140,7 +197,6 @@
       }
 
       nav {
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 10px;
@@ -149,12 +205,18 @@
       nav a {
         margin: 8px 10px;
       }
+
+      .btn {
+        width: 90%;
+        display: block;
+        margin: 10px auto;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <header data-aos="fade-down">
     <div class="logo">
       <img src="logo.jpg" alt="Tattva Mantra Logo" />
       <strong>Tattva Mantra</strong>
@@ -170,48 +232,62 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" data-aos="zoom-in">
     <h1>Holistic Wellness & Emotional Resilience</h1>
     <p>Blending modern psychology with compassionate care for lasting transformation</p>
-    <div class="buttons">
-      <a href="https://wa.me/917000122900?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation." target="_blank">Schedule Consultation</a>
-      <a href="form.html" target="_blank" style="background-color: white; color: #008060;">Fill Appointment Form</a>
+    <div class="buttons" data-aos="fade-up">
+      <a href="https://wa.me/917000122900?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation." class="btn" target="_blank">Schedule Consultation</a>
+      <a href="form.html" class="btn secondary" target="_blank">Fill Appointment Form</a>
     </div>
   </section>
 
-  <section>
+  <section class="intro" data-aos="fade-up">
     <h2>Why Tattva Mantra?</h2>
-    <p style="text-align: center; max-width: 800px; margin: auto;">
-      At Tattva Mantra, we blend ancient wisdom with modern therapy. To help you heal emotionally, find purpose and live with clarity. Whether it's stress, relationships, or career decisions — we are here for you with heart, mind, and spirit.
-    </p>
+    <p>We blend ancient wisdom with modern therapy to help you heal emotionally, find purpose, and live with clarity. Whether it's stress, relationships, or career decisions — we are here for you with heart, mind, and spirit.</p>
   </section>
 
-  <section>
+  <section data-aos="fade-up">
     <h2>Our Services</h2>
-    <div class="service"><strong>Emotional Therapy</strong> – Heal trauma, anxiety, grief and burnout in a safe and gentle space.</div>
-    <div class="service"><strong>Career Guidance</strong> – Get clarity on your path, skills and life direction with expert coaching.</div>
-    <div class="service"><strong>Holistic Healing</strong> – Align mind, body, and soul with practices that support long-term wellbeing.</div>
+    <div class="service-card" data-aos="fade-up">
+      <h3><a href="emotional-therapy.html">Emotional Therapy</a></h3>
+      <p>Heal trauma, anxiety, grief, and burnout through compassionate, evidence-based sessions tailored to your needs.</p>
+    </div>
+    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+      <h3><a href="career-guidance.html">Career Guidance</a></h3>
+      <p>Discover your strengths and direction with insightful coaching, life planning tools, and practical goal-setting.</p>
+    </div>
+    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+      <h3><a href="holistic-healing.html">Holistic Healing</a></h3>
+      <p>Realign mind, body, and soul using mindfulness, spiritual exploration, and integrative wellness practices.</p>
+    </div>
   </section>
 
-  <section>
+  <section data-aos="fade-up">
     <h2>What Clients Say</h2>
-    <div class="testimonial">"I found so much clarity and calm after just a few sessions. This space truly heals!" – Radhika M.</div>
-    <div class="testimonial">"The counseling I received was empathetic and deeply insightful. Highly recommended." – Aditya S.</div>
+    <div class="testimonial" data-aos="fade-right">"I found so much clarity and calm after just a few sessions. This space truly heals!" – Radhika M.</div>
+    <div class="testimonial" data-aos="fade-left">"The counseling I received was empathetic and deeply insightful. Highly recommended." – Aditya S.</div>
   </section>
 
-  <section class="cta">
+  <section class="cta" data-aos="zoom-in">
     <h2>Begin Your Healing Journey Today</h2>
-    <a href="form.html" target="_blank">Book an Appointment</a>
+    <a href="form.html" class="btn" target="_blank">Book an Appointment</a>
   </section>
 
-  <footer>
+  <footer data-aos="fade-up">
     &copy; 2025 Tattva Mantra. All rights reserved.
   </footer>
 
- <a class="whatsapp-button" href="https://wa.me/917000122900?text=Hi%20I%20would%20like%20to%20connect" target="_blank" title="Chat on WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" style="width: 60px; height: 60px;" />
-</a>
+  <a class="whatsapp-button" href="https://wa.me/917000122900?text=Hi%20I%20would%20like%20to%20connect" target="_blank" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+  </a>
 
-
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
