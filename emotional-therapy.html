@@ -7,94 +7,156 @@
   <meta name="description" content="Heal emotionally and find inner peace with Emotional Therapy at Tattva Mantra. Personalized, compassionate support for anxiety, trauma, and emotional wellbeing." />
   <meta name="keywords" content="Emotional Therapy, Mental Health, Anxiety Support, Trauma Healing, Tattva Mantra, Online Therapy, Counseling India" />
   <meta name="author" content="Tattva Mantra" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    :root {
+      --primary: #a8d5ba;
+      --text: #333;
+      --bg: #ffffff;
+      --accent: #4e9464;
+    }
+
+    * {
       margin: 0;
-      background-color: #f8fdf8;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
     header {
-      background: #a8d5ba;
-      color: #fff;
-      padding: 60px 20px 40px;
+      background: var(--primary);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom right, #e8f5e9, #f1f8f4);
+      padding: 60px 20px;
       text-align: center;
     }
 
-    header h1 {
-      margin: 0;
+    .hero h1 {
       font-size: 2.5rem;
+      color: var(--accent);
     }
 
-    main {
-      padding: 0 20px;
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section {
+      padding: 50px 20px;
       max-width: 900px;
       margin: auto;
     }
 
-    section {
-      padding: 40px 0;
-      line-height: 1.7;
-    }
-
-    section img.icon {
-      width: 80px;
-      margin-bottom: 20px;
-    }
-
-    section h2 {
-      color: #4e9464;
-      font-size: 1.8rem;
+    .section h2 {
+      color: var(--accent);
       margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+
+    .section p {
+      margin-bottom: 25px;
     }
 
     .cta {
       text-align: center;
-      margin-top: 40px;
+      margin: 40px 0;
     }
 
     .cta a {
-      background: #4e9464;
-      color: #fff;
-      text-decoration: none;
+      background: var(--accent);
+      color: white;
       padding: 12px 25px;
       border-radius: 6px;
-      font-size: 1.1rem;
-      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
     }
 
     footer {
-      background: #a8d5ba;
-      color: white;
+      background: var(--primary);
       text-align: center;
       padding: 15px;
-      margin-top: 40px;
+      color: #fff;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-float img {
+      width: 55px;
+      height: 55px;
     }
 
     @media (max-width: 600px) {
-      header h1 {
+      .hero h1 {
         font-size: 2rem;
       }
-
-      section {
-        padding: 30px 0;
+      nav a {
+        margin-left: 10px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Navbar -->
   <header>
+    <a href="index.html"><img src="logo.jpg" alt="Tattva Mantra Logo"></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
     <h1>Emotional Therapy</h1>
     <p><strong>Do you feel like your emotions are too much to handle?</strong></p>
     <p>Healing from within — your journey toward inner balance starts here.</p>
-  </header>
+  </section>
 
-  <main>
-
+  <!-- Main Content -->
+  <main class="section">
     <section>
-      <img src="shant.png" alt="Illustration representing emotional therapy and healing" class="icon" />
       <h2>What is Emotional Therapy?</h2>
       <p>Emotional therapy focuses on helping individuals understand, express, and manage their emotions in healthy ways. Whether you're facing anxiety, grief, mood swings, or past trauma, emotional therapy creates a safe space to heal and grow.</p>
     </section>
@@ -117,9 +179,16 @@
     <div class="cta">
       <a href="https://wa.me/917000122900" target="_blank" aria-label="Book emotional therapy appointment on WhatsApp">📲 Book Appointment on WhatsApp</a>
     </div>
-
   </main>
 
+  <!-- WhatsApp Floating Button -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/917000122900" target="_blank" aria-label="Chat with us on WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat Button">
+    </a>
+  </div>
+
+  <!-- Footer -->
   <footer>
     &copy; 2025 Tattva Mantra. All rights reserved.
   </footer>
