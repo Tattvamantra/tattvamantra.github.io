@@ -57,6 +57,7 @@
       background: linear-gradient(to bottom right, #e8f5e9, #f1f8f4);
       padding: 60px 20px;
       text-align: center;
+      position: relative;
     }
 
     .hero h1 {
@@ -70,6 +71,13 @@
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .hero img {
+      margin-top: 20px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
     }
 
     .section {
@@ -100,6 +108,14 @@
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .cta a img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
     }
 
     footer {
@@ -152,6 +168,7 @@
     <h1>Emotional Therapy</h1>
     <p><strong>Do you feel like your emotions are too much to handle?</strong></p>
     <p>Healing from within — your journey toward inner balance starts here.</p>
+    <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg" alt="Emotional Therapy Illustration">
   </section>
 
   <!-- Main Content -->
@@ -177,7 +194,10 @@
     </section>
 
     <div class="cta">
-      <a href="https://wa.me/917000122900" target="_blank" aria-label="Book emotional therapy appointment on WhatsApp">📲 Book Appointment on WhatsApp</a>
+      <a href="https://wa.me/917000122900" target="_blank" aria-label="Book emotional therapy appointment on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+        Book Appointment on WhatsApp
+      </a>
     </div>
   </main>
 
