@@ -2,34 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Emotional Therapy services at Tattva Mantra to support mental well-being, inner healing, and emotional resilience.">
-  <title>Emotional Therapy - Tattva Mantra</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emotional Therapy | Tattva Mantra</title>
+  <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap"
+    rel="stylesheet"
+  />
   <style>
-    :root {
-      --soft-green: #e6f4ea;
-      --primary-green: #4caf50;
-      --text-dark: #2e3d2f;
-      --white: #ffffff;
+    /* Basic Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      font-family: 'Merriweather', serif;
-      background-color: var(--white);
-      color: var(--text-dark);
+      font-family: 'Open Sans', sans-serif;
+      background: #fff;
+      color: #2f4f3f;
       line-height: 1.6;
     }
 
     header {
-      background-color: var(--white);
-      padding: 10px 20px;
+      background: #f4f9f4;
+      padding: 1rem 2rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid var(--soft-green);
+      justify-content: space-between;
+      border-bottom: 1px solid #d8e2d1;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     header img {
@@ -37,169 +43,223 @@
     }
 
     nav a {
-      margin-left: 20px;
+      color: #2f4f3f;
       text-decoration: none;
-      color: var(--text-dark);
-      font-weight: bold;
+      margin-left: 1.8rem;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      color: var(--primary-green);
+      color: #5ba877;
     }
 
-    .hero-therapy {
-      background-image: url('https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg');
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80');
       background-size: cover;
       background-position: center;
-      padding: 100px 20px;
-      color: white;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero-therapy .overlay {
-      background: rgba(0, 70, 50, 0.6);
-      padding: 60px 20px;
       border-radius: 12px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .hero-therapy h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    .hero-therapy .hook {
-      font-size: 1.5em;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .hero-therapy .sub {
-      font-size: 1.2em;
-      font-weight: 400;
-    }
-
-    .content {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .content h2 {
-      color: var(--primary-green);
-      margin-top: 0;
-    }
-
-    .content p {
-      margin-bottom: 20px;
-    }
-
-    .cta-button {
-      background-color: var(--primary-green);
       color: white;
-      padding: 12px 24px;
+      padding: 4rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      box-shadow: inset 0 0 0 1000px rgba(46, 125, 50, 0.55);
+    }
+
+    .hero h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      font-style: italic;
+      margin-bottom: 1.8rem;
+    }
+
+    .btn-whatsapp {
+      background-color: #25d366;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
       border: none;
-      border-radius: 25px;
-      font-size: 1em;
-      text-decoration: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 700;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 0.5rem;
+      text-decoration: none;
+      transition: background-color 0.3s;
     }
 
-    .cta-button:hover {
-      background-color: #3e8e41;
+    .btn-whatsapp:hover {
+      background-color: #1ebe57;
     }
 
-    .footer {
-      background-color: var(--soft-green);
+    .btn-whatsapp svg {
+      width: 22px;
+      height: 22px;
+      fill: white;
+    }
+
+    /* Content Sections */
+    .content-section {
+      margin-bottom: 3rem;
+    }
+
+    .info-block {
+      background-color: #e6f0e8; /* soft pastel green */
+      color: #2f4f3f; /* dark green */
+      padding: 1.8rem 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(47, 79, 63, 0.15);
+      line-height: 1.7;
+    }
+
+    .info-block h2 {
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #34663e;
+    }
+
+    .emoji-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 1.2rem;
+    }
+
+    .emoji-list li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* Footer */
+    footer {
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 1.5rem;
+      color: #577d55;
+      font-size: 0.9rem;
+      border-top: 1px solid #d8e2d1;
+      margin-top: 4rem;
     }
 
-    /* WhatsApp Floating Button */
+    /* Floating WhatsApp */
     .whatsapp-float {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      border-radius: 50%;
       width: 60px;
       height: 60px;
+      bottom: 30px;
+      right: 30px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 1000;
       display: flex;
-      align-items: center;
       justify-content: center;
-      z-index: 999;
+      align-items: center;
+      transition: background-color 0.3s;
     }
 
-    .whatsapp-float img {
-      width: 35px;
-      height: 35px;
+    .whatsapp-float:hover {
+      background-color: #1ebe57;
     }
 
-    @media (max-width: 600px) {
-      .hero-therapy h1 {
-        font-size: 2em;
-      }
-
-      .hero-therapy .hook {
-        font-size: 1.2em;
-      }
-
-      .hero-therapy .sub {
-        font-size: 1em;
-      }
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+      fill: white;
     }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
-    <img src="logo.jpg" alt="Tattva Mantra Logo" />
+    <a href="index.html"><img src="logo.jpg" alt="Tattva Mantra Logo" /></a>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
+      <a href="emotional-therapy.html" aria-current="page">Emotional Therapy</a>
+      <a href="career-guidance.html">Career Guidance</a>
+      <a href="holistic-wellness.html">Holistic Wellness</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-therapy">
-    <div class="overlay">
+  <main>
+    <section class="hero" aria-label="Emotional Therapy Introduction">
       <h1>Emotional Therapy</h1>
-      <p class="hook">Do you feel like your emotions are too much to handle?</p>
-      <p class="sub">Healing from within — your journey toward inner balance starts here.</p>
-    </div>
-  </section>
+      <p>Do you feel like your emotions are too much to handle?</p>
+      <p>Healing from within — your journey toward inner balance starts here.</p>
+      <a
+        href="https://wa.me/917000122900"
+        class="btn-whatsapp"
+        target="_blank"
+        rel="noopener"
+        aria-label="Book Appointment on WhatsApp"
+        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path
+            d="M16 3C9.925 3 5 7.925 5 14c0 2.61.967 5.13 2.72 7.01L6 29l7.263-1.914a11.94 11.94 0 006.737 1.59c6.075 0 11-4.925 11-11S22.075 3 16 3zm0 20.25a8.433 8.433 0 01-4.348-1.237l-.31-.19-4.31 1.136 1.15-4.182-.2-.32a8.437 8.437 0 1111.03 3.263z"
+          />
+          <path
+            d="M21.464 18.38c-.297-.15-1.756-.867-2.03-.964-.273-.1-.472-.15-.67.15-.196.297-.758.964-.93 1.16-.17.196-.347.22-.644.075-.297-.15-1.254-.463-2.39-1.477-.883-.786-1.48-1.755-1.653-2.05-.172-.296-.018-.455.13-.604.134-.133.298-.347.446-.52.15-.172.2-.296.3-.494.1-.198.05-.37-.025-.52-.075-.15-.67-1.615-.92-2.212-.242-.58-.488-.5-.67-.51l-.573-.01c-.196 0-.52.074-.792.37-.27.296-1.03 1.007-1.03 2.45 0 1.443 1.054 2.84 1.2 3.04.15.198 2.07 3.16 5.02 4.43.702.303 1.248.484 1.675.62.703.226 1.344.194 1.85.118.565-.085 1.756-.717 2.005-1.408.247-.69.247-1.28.173-1.408-.074-.128-.27-.198-.57-.347z"
+          />
+        </svg>
+        Book Appointment</a
+      >
+    </section>
 
-  <!-- Content -->
-  <div class="content">
-    <h2>What is Emotional Therapy?</h2>
-    <p>Emotional therapy helps individuals understand, express, and manage their emotions in a healthy way. It creates a safe space for healing emotional wounds, addressing anxiety, depression, and emotional overwhelm.</p>
+    <section class="content-section">
+      <div class="info-block">
+        <h2>What is Emotional Therapy?</h2>
+        <p>
+          Emotional therapy helps individuals explore, understand, and regulate their emotions. At Tattva Mantra, we provide a safe space to express your feelings, heal from past experiences, and build emotional resilience. Our approach combines empathy, holistic understanding, and therapeutic techniques that empower you to reconnect with your inner peace.
+        </p>
+      </div>
 
-    <h2>How We Help</h2>
-    <p>At Tattva Mantra, our compassionate therapists guide you through tailored techniques such as mindfulness, talk therapy, and body-awareness practices to release stuck emotions and rediscover peace.</p>
+      <div class="info-block">
+        <h2>How We Help</h2>
+        <ul class="emoji-list">
+          <li>✅ Identify and process emotional patterns</li>
+          <li>💚 Heal from emotional wounds and trauma</li>
+          <li>🌿 Build emotional resilience and mindfulness</li>
+          <li>✨ Feel more balanced, grounded, and at peace</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-    <a href="https://wa.me/917000122900" class="cta-button" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp icon" width="20" height="20">
-      Book Appointment on WhatsApp
-    </a>
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    <p>&copy; 2025 Tattva Mantra. All rights reserved.</p>
-  </div>
-
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/917000122900" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp icon">
+  <a
+    href="https://wa.me/917000122900"
+    class="whatsapp-float"
+    aria-label="Chat on WhatsApp"
+    target="_blank"
+    rel="noopener"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <path
+        d="M16 3C9.925 3 5 7.925 5 14c0 2.61.967 5.13 2.72 7.01L6 29l7.263-1.914a11.94 11.94 0 006.737 1.59c6.075 0 11-4.925 11-11S22.075 3 16 3zm0 20.25a8.433 8.433 0 01-4.348-1.237l-.31-.19-4.31 1.136 1.15-4.182-.2-.32a8.437 8.437 0 1111.03 3.263z"
+      />
+      <path
+        d="M21.464 18.38c-.297-.15-1.756-.867-2.03-.964-.273-.1-.472-.15-.67.15-.196.297-.758.964-.93 1.16-.17.196-.347.22-.644.075-.297-.15-1.254-.463-2.39-1.477-.883-.786-1.48-1.755-1.653-2.05-.172-.296-.018-.455.13-.604.134-.133.298-.347.446-.52.15-.172.2-.296.3-.494.1-.198.05-.37-.025-.52-.075-.15-.67-1.615-.92-2.212-.242-.58-.488-.5-.67-.51l-.573-.01c-.196 0-.52.074-.792.37-.27.296-1.03 1.007-1.03 2.45 0 1.443 1.054 2.84 1.2 3.04.15.198 2.07 3.16 5.02 4.43.702.303 1.248.484 1.675.62.703.226 1.344.194 1.85.118.565-.085 1.756-.717 2.005-1.408.247-.69.247-1.28.173-1.408-.074-.128-.27-.198-.57-.347z"
+      />
+    </svg>
   </a>
 
+  <footer>
+    &copy; 2025 Tattva Mantra. All rights reserved.
+  </footer>
 </body>
 </html>
