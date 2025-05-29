@@ -1,155 +1,235 @@
 :root {
-  /* Light Theme (Default) */
-  --color-primary: #2e5e4e;
-  --color-secondary: #6ba68c;
-  --color-accent: #a7d3bb;
-  --color-background: #f8fdf9;
-  --color-text: #2e5e4e;
-  --color-text-inverse: #f8fdf9;
-  --color-shadow: rgba(0, 0, 0, 0.1);
-  --card-bg: #ffffff;
-
-  /* Font & Spacing */
-  --font-main: 'Poppins', 'Open Sans', sans-serif;
-  --max-width: 60rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 3rem;
-  --border-radius: 0.375rem;
-  
-  /* Custom Easing */
-  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-in-out-back: cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  --ease-elastic: cubic-bezier(0.5, 1.75, 0.75, 1.25);
-
-  /* Animation */
-  --fade-in: fadeIn 0.5s var(--ease-out-quint);
-  --slide-up: slideUp 0.5s var(--ease-out-quint);
-  --transition-default: 0.3s var(--ease-out-quint);
+  --primary-color: #004d40;
+  --accent-color: #25D366;
+  --background-color: #e8fef5;
+  --text-dark: #00332e;
+  --text-light: #ffffff;
 }
 
-/* === Dark Mode === */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: #a7d3bb;
-    --color-secondary: #558c76;
-    --color-accent: #2e5e4e;
-    --color-background: #1a2a24;
-    --color-text: #e0f0e8;
-    --color-text-inverse: #1a2a24;
-    --color-shadow: rgba(0, 0, 0, 0.3);
-    --card-bg: #213a32;
-  }
-}
-
-/* Manual Dark Mode Toggle Class */
-.dark-mode {
-  --color-primary: #a7d3bb;
-  --color-secondary: #558c76;
-  --color-accent: #2e5e4e;
-  --color-background: #1a2a24;
-  --color-text: #e0f0e8;
-  --color-text-inverse: #1a2a24;
-  --color-shadow: rgba(0, 0, 0, 0.3);
-  --card-bg: #213a32;
-}
-
-/* === Base Styles === */
-body {
+* {
   margin: 0;
-  font-family: var(--font-main);
-  background-color: var(--color-background);
-  color: var(--color-text);
-  line-height: 1.6;
-  min-height: 100vh;
-  transition: 
-    background-color var(--transition-default),
-    color var(--transition-default);
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/* === Accessibility Improvements === */
-a, button, input {
-  &:focus-visible {
-    outline: 2px solid var(--color-secondary);
-    outline-offset: 0.25rem;
-  }
+body {
+  font-family: 'Merriweather', serif;
+  background-color: var(--background-color);
+  color: var(--text-dark);
 }
 
-/* Respect Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
-/* === Animations === */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { 
-    opacity: 0;
-    transform: translateY(1.25rem);
-  }
-  to { 
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* === Header & Navigation === */
 header {
-  background-color: var(--color-accent);
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bg.jpeg') center/cover no-repeat;
+  color: var(--text-light);
   text-align: center;
-  padding: var(--spacing-md) var(--spacing-sm);
-  position: relative;
+  padding: 120px 20px 100px;
 }
 
-/* Mobile Menu Toggle - Now with Better Contrast */
-.menu-toggle {
-  display: none;
-  background: var(--color-secondary);
+.hero h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.hero .buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1EB854;
+}
+
+.btn.secondary {
+  background-color: #2196f3;
+  color: white;
+}
+
+.btn.secondary:hover {
+  background-color: #1976d2;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h1, section h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.intro p {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-left: 5px solid var(--accent-color);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.service-card h3 a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.service-card h3 {
+  color: var(--primary-color);
+}
+
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  border-left: 5px solid var(--accent-color);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.cta {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Merriweather', serif;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button.btn {
   border: none;
-  border-radius: var(--border-radius);
   cursor: pointer;
-  padding: 0.75rem;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  z-index: 1001;
 }
 
-/* Dropdown Menu - Smoother Transitions */
-.dropdown-content {
-  transition: 
-    opacity var(--transition-default),
-    transform var(--transition-default),
-    visibility var(--transition-default),
-    max-height var(--transition-default);
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
 }
 
-/* === Buttons - Consistent Styling === */
-button, .cta-button {
-  transition: 
-    background-color var(--transition-default),
-    transform 0.2s var(--ease-elastic);
-}
-
-/* === WhatsApp Button - Accessible Alternative === */
 .whatsapp-button {
-  /* Existing styles... */
-  &:focus {
-    outline: 2px solid var(--color-text-inverse);
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
 }
 
-/* === Dark Mode Toggle - Clearer Visual Feedback === */
-.dark-mode-toggle {
-  /* Existing styles... */
-  &:focus {
-    box-shadow: 0 0 0 3px var(--color-text);
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 8px 10px;
+  }
+
+  .btn {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
   }
 }
