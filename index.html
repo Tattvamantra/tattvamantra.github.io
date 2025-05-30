@@ -1,220 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tattva Mantra - Holistic Wellness & Emotional Resilience through modern psychology and compassionate care." />
-  <title>Tattva Mantra</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <meta name="description" content="Tattvamantra: Holistic Wellness & Emotional Resilience" />
+  <title>Tattvamantra - Holistic Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --green: #a8d5ba;
-      --dark-green: #26734d;
-      --white: #ffffff;
-      --gray: #f5f5f5;
-    }
-
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
       font-family: 'Poppins', sans-serif;
-      background-color: var(--white);
-      color: #222;
     }
-
+    body {
+      background-color: #f5fff9;
+      color: #333;
+      line-height: 1.6;
+    }
     header {
-      background-color: var(--white);
+      background: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      border-bottom: 1px solid #e0e0e0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
     header img {
       height: 50px;
-      margin-right: 10px;
     }
-
-    .logo-group {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo-text {
-      font-weight: 600;
-      font-size: 1.4rem;
-      color: var(--dark-green);
-    }
-
-    .appointment-btn {
-      display: flex;
-      align-items: center;
-      background-color: var(--dark-green);
-      color: var(--white);
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .appointment-btn svg {
-      height: 20px;
-      width: 20px;
-      margin-right: 8px;
-      fill: white;
-    }
-
-    nav {
-      background-color: var(--green);
-      padding: 0.75rem 2rem;
-    }
-
     nav ul {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+      gap: 1rem;
     }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #004d26;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    nav ul li a:hover {
-      color: #002d1a;
-    }
-
-    .hero {
+    nav ul li {
       position: relative;
-      background: url('bg.jpeg') center center/cover no-repeat;
-      height: 80vh;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    nav ul ul li {
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+    }
+    .cta {
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+    .hero {
+      position: relative;
+      background: url('bg.jpeg') center/cover no-repeat;
+      color: white;
+      padding: 6rem 2rem;
       text-align: center;
     }
-
-    .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      color: white;
-      padding: 2rem;
-    }
-
-    .hero-content h1 {
+    .hero h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-
-    .hero-content p {
+    .hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
     }
-
-    .hero-buttons a {
-      display: inline-block;
-      margin: 0 1rem;
-      padding: 0.75rem 1.5rem;
-      border-radius: 30px;
+    .hero .buttons a {
+      margin: 0 0.5rem;
+    }
+    footer {
+      background-color: #003d2f;
+      color: white;
+      padding: 2rem;
+    }
+    footer .columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+    footer h4 {
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    footer ul {
+      list-style: none;
+    }
+    footer ul li {
+      margin-bottom: 0.5rem;
+    }
+    footer ul li a {
+      color: white;
       text-decoration: none;
-      font-weight: 500;
-      transition: background 0.3s;
     }
-
-    .hero-buttons .btn-green {
-      background-color: var(--green);
-      color: #003d1a;
+    footer ul li a:hover {
+      text-decoration: underline;
     }
-
-    .hero-buttons .btn-white {
-      background-color: var(--white);
-      color: #26734d;
-    }
-
-    .hero-buttons a:hover {
-      opacity: 0.9;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .hero-content h1 {
-        font-size: 2rem;
-      }
-
-      .hero-content p {
-        font-size: 1rem;
-      }
+    footer .bottom {
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid #ffffff44;
+      padding-top: 1rem;
     }
   </style>
 </head>
 
 <body>
-
-  <!-- Header -->
   <header>
-    <div class="logo-group">
-      <img src="logo.jpg" alt="Tattva Mantra Logo" />
-      <span class="logo-text">Tattva Mantra</span>
-    </div>
-    <a href="https://wa.me/917000122900" class="appointment-btn" target="_blank">
-      <!-- WhatsApp SVG icon -->
-      <svg viewBox="0 0 32 32">
-        <path d="M16 0c8.8 0 16 7.2 16 16 0 2.9-0.8 5.7-2.3 8.2l1.8 6.6-6.7-1.8c-2.4 1.3-5.1 2-7.8 2-8.8 0-16-7.2-16-16s7.2-16 16-16zM16 2.9c-7.2 0-13.1 5.9-13.1 13.1 0 2.6 0.8 5.1 2.1 7.2l-1.3 4.6 4.7-1.2c2.1 1.1 4.4 1.8 6.9 1.8 7.2 0 13.1-5.9 13.1-13.1s-5.9-13.1-13.1-13.1zM23.4 19.5c-0.4-0.2-2.4-1.2-2.7-1.3-0.3-0.1-0.6-0.2-0.9 0.2-0.3 0.4-1.1 1.3-1.3 1.5-0.2 0.2-0.5 0.3-0.9 0.1-0.4-0.2-1.6-0.6-3-2-1.1-1.1-1.9-2.5-2.1-2.9-0.2-0.4 0-0.6 0.2-0.8 0.2-0.2 0.4-0.5 0.6-0.7 0.2-0.2 0.3-0.4 0.5-0.6 0.2-0.2 0.1-0.4 0-0.6-0.1-0.2-0.9-2.2-1.2-3-0.3-0.8-0.6-0.7-0.9-0.7s-0.5 0-0.8 0c-0.3 0-0.6 0.1-0.8 0.4-0.2 0.2-1.1 1.1-1.1 2.6 0 1.5 1.1 2.9 1.3 3.1 0.2 0.2 2.1 3.2 5 4.5 0.7 0.3 1.3 0.5 1.7 0.6 0.7 0.2 1.3 0.2 1.8 0.1 0.5-0.1 2.4-1 2.7-2 0.3-0.9 0.3-1.7 0.2-1.8z" />
-      </svg>
-      Book your session
+    <div><img src="logo.jpg" alt="Tattvamantra Logo"></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li>
+          <a href="#">Services</a>
+          <ul>
+            <li><a href="emotional-therapy.html">Emotional Therapy</a></li>
+            <li><a href="career-guidance.html">Career Guidance</a></li>
+            <li><a href="holistic-healing.html">Holistic Healing</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Career</a>
+          <ul>
+            <li><a href="career.html">Opportunities</a></li>
+            <li><a href="collaborate.html">Collaborate with Us</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="#">Privacy Policies</a>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="data-protection.html">Data Protection</a></li>
+          </ul>
+        </li>
+        <li><a href="testimonial.html">Testimonial</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="#">Blog</a>
+          <ul>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a href="https://wa.me/917000122900" class="cta" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20"> Book Your Session
     </a>
   </header>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="index.html">🏠 Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="#">Career</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="#">Privacy Policies</a></li>
-      <li><a href="#">Testimonial</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="#">Blog</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Holistic Wellness & Emotional Resilience</h1>
-      <p>Blending modern psychology with compassionate care for lasting transformation</p>
-      <div class="hero-buttons">
-        <a href="form.html" class="btn-green">Schedule Consultation</a>
-        <a href="services.html" class="btn-white">Learn More</a>
-      </div>
+    <h1>Tattvamantra - Live with joy and serenity</h1>
+    <p>Blending modern psychology with compassionate care for lasting transformation</p>
+    <div class="buttons">
+      <a href="form.html" class="cta">Schedule Consultation</a>
+      <a href="services.html" class="cta">Learn More</a>
     </div>
   </section>
 
+  <footer>
+    <div class="columns">
+      <div>
+        <h4><img src="logo.jpg" alt="Tattvamantra Logo" style="height:30px; vertical-align:middle;"> Tattvamantra</h4>
+        <p>Blending modern psychology with compassionate care for lasting transformation.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="emotional-therapy.html">Emotional Therapy</a></li>
+          <li><a href="career-guidance.html">Career Guidance</a></li>
+          <li><a href="holistic-healing.html">Holistic Healing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="career.html">Careers</a></li>
+          <li><a href="testimonial.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">© 2025 Tattvamantra. All rights reserved.</div>
+  </footer>
 </body>
+
 </html>
