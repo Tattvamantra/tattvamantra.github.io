@@ -1,265 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Emotional Therapy sessions at Tattva Mantra for anxiety, depression, and emotional resilience. A fusion of psychology and ancient healing." />
   <title>Emotional Therapy | Tattva Mantra</title>
-  <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" />
   <style>
-    /* Basic Reset */
+    :root {
+      --primary: #d1e7dd;
+      --text: #1b4332;
+      --accent: #95d5b2;
+      --bg-light: #f8f9fa;
+      --bg-dark: #e7f5ec;
+    }
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Open Sans', sans-serif;
-      background: #fff;
-      color: #2f4f3f;
-      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      background-color: white;
+      line-height: 1.8;
     }
 
     header {
-      background: #f4f9f4;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #d8e2d1;
-      position: sticky;
+      background: url('hero.jpg') no-repeat center center/cover;
+      height: 85vh;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
       top: 0;
-      z-index: 100;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
     }
 
-    header img {
-      height: 50px;
-    }
-
-    nav a {
-      color: #2f4f3f;
-      text-decoration: none;
-      margin-left: 1.8rem;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #5ba877;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
+    .hero-content {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+      z-index: 1;
       padding: 0 1rem;
     }
 
-    /* Hero Section */
-    .hero {
-      position: relative;
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80');
-      background-size: cover;
-      background-position: center;
-      border-radius: 12px;
-      color: white;
-      padding: 4rem 2rem;
-      margin-bottom: 2.5rem;
-      text-align: center;
-      box-shadow: inset 0 0 0 1000px rgba(46, 125, 50, 0.55);
-    }
-
-    .hero h1 {
-      font-family: 'Merriweather', serif;
+    .hero-content h1 {
       font-size: 2.8rem;
       margin-bottom: 0.5rem;
     }
 
-    .hero p {
-      font-size: 1.25rem;
-      font-style: italic;
-      margin-bottom: 1.8rem;
+    .hero-content p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    .btn-whatsapp {
-      background-color: #25d366;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: 700;
-      display: inline-flex;
+    nav {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 0.5rem;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav img {
+      height: 50px;
+    }
+
+    nav a {
+      margin-left: 20px;
       text-decoration: none;
-      transition: background-color 0.3s;
+      color: var(--text);
+      font-weight: 500;
     }
 
-    .btn-whatsapp:hover {
-      background-color: #1ebe57;
+    main {
+      padding: 4rem 1rem;
+      max-width: 960px;
+      margin: 0 auto;
     }
 
-    .btn-whatsapp svg {
-      width: 22px;
-      height: 22px;
-      fill: white;
-    }
-
-    /* Content Sections */
-    .content-section {
+    section {
       margin-bottom: 3rem;
     }
 
-    .info-block {
-      background-color: #e6f0e8; /* soft pastel green */
-      color: #2f4f3f; /* dark green */
-      padding: 1.8rem 2rem;
-      margin-bottom: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(47, 79, 63, 0.15);
-      line-height: 1.7;
-    }
-
-    .info-block h2 {
-      margin-bottom: 1rem;
-      font-weight: 700;
+    h2 {
       font-size: 1.8rem;
-      color: #34663e;
+      margin-bottom: 1rem;
+      color: var(--text);
     }
 
-    .emoji-list {
-      list-style: none;
-      padding-left: 0;
-      font-size: 1.2rem;
+    ul {
+      padding-left: 1.5rem;
     }
 
-    .emoji-list li {
-      margin-bottom: 0.8rem;
-    }
-
-    /* Footer */
     footer {
+      background-color: var(--bg-dark);
       text-align: center;
-      padding: 1.5rem;
-      color: #577d55;
+      padding: 1rem;
       font-size: 0.9rem;
-      border-top: 1px solid #d8e2d1;
-      margin-top: 4rem;
+      color: var(--text);
     }
 
-    /* Floating WhatsApp */
     .whatsapp-float {
       position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 30px;
-      right: 30px;
-      background-color: #25d366;
-      color: #fff;
-      border-radius: 50px;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 3px #999;
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: background-color 0.3s;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
     }
 
-    .whatsapp-float:hover {
-      background-color: #1ebe57;
-    }
-
-    .whatsapp-float svg {
-      width: 30px;
-      height: 30px;
-      fill: white;
+    .whatsapp-float img {
+      width: 50px;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <a href="index.html"><img src="logo.jpg" alt="Tattva Mantra Logo" /></a>
-    <nav>
+  <nav>
+    <img src="logo.jpg" alt="Tattva Mantra Logo">
+    <div>
       <a href="index.html">Home</a>
-      <a href="emotional-therapy.html" aria-current="page">Emotional Therapy</a>
-      <a href="career-guidance.html">Career Guidance</a>
-      <a href="holistic-wellness.html">Holistic Wellness</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
-    </nav>
+    </div>
+  </nav>
+
+  <header>
+    <div class="hero-content">
+      <h1>Emotional Therapy</h1>
+      <p>Healing the mind with science and soul.</p>
+    </div>
   </header>
 
   <main>
-    <section class="hero" aria-label="Emotional Therapy Introduction">
-      <h1>Emotional Therapy</h1>
-      <p>Do you feel like your emotions are too much to handle?</p>
-      <p>Healing from within — your journey toward inner balance starts here.</p>
-      <a
-        href="https://wa.me/917000122900"
-        class="btn-whatsapp"
-        target="_blank"
-        rel="noopener"
-        aria-label="Book Appointment on WhatsApp"
-        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-          <path
-            d="M16 3C9.925 3 5 7.925 5 14c0 2.61.967 5.13 2.72 7.01L6 29l7.263-1.914a11.94 11.94 0 006.737 1.59c6.075 0 11-4.925 11-11S22.075 3 16 3zm0 20.25a8.433 8.433 0 01-4.348-1.237l-.31-.19-4.31 1.136 1.15-4.182-.2-.32a8.437 8.437 0 1111.03 3.263z"
-          />
-          <path
-            d="M21.464 18.38c-.297-.15-1.756-.867-2.03-.964-.273-.1-.472-.15-.67.15-.196.297-.758.964-.93 1.16-.17.196-.347.22-.644.075-.297-.15-1.254-.463-2.39-1.477-.883-.786-1.48-1.755-1.653-2.05-.172-.296-.018-.455.13-.604.134-.133.298-.347.446-.52.15-.172.2-.296.3-.494.1-.198.05-.37-.025-.52-.075-.15-.67-1.615-.92-2.212-.242-.58-.488-.5-.67-.51l-.573-.01c-.196 0-.52.074-.792.37-.27.296-1.03 1.007-1.03 2.45 0 1.443 1.054 2.84 1.2 3.04.15.198 2.07 3.16 5.02 4.43.702.303 1.248.484 1.675.62.703.226 1.344.194 1.85.118.565-.085 1.756-.717 2.005-1.408.247-.69.247-1.28.173-1.408-.074-.128-.27-.198-.57-.347z"
-          />
-        </svg>
-        Book Appointment</a
-      >
+    <section>
+      <p>At Tattva Mantra, we understand that emotional well-being is not a luxury—it’s a necessity. Whether you're struggling with anxiety, carrying the weight of depression, or simply feeling lost in the whirlwind of modern life, our Emotional Therapy sessions offer you a safe, supportive, and deeply transformative space.</p>
     </section>
 
-    <section class="content-section">
-      <div class="info-block">
-        <h2>What is Emotional Therapy?</h2>
-        <p>
-          Emotional therapy helps individuals explore, understand, and regulate their emotions. At Tattva Mantra, we provide a safe space to express your feelings, heal from past experiences, and build emotional resilience. Our approach combines empathy, holistic understanding, and therapeutic techniques that empower you to reconnect with your inner peace.
-        </p>
-      </div>
+    <section>
+      <h2>A Thoughtfully Balanced Approach</h2>
+      <p>Our emotional therapy draws from both modern psychological science and timeless ancient practices. We blend evidence-based methods like Cognitive Behavioral Therapy (CBT), mindfulness-based therapy, and talk therapy with powerful practices such as guided meditation and elements of spiritual awakening.</p>
+      <p>This unique integration allows us to approach emotional healing holistically—calming the mind, honoring the body, and awakening the deeper self.</p>
+    </section>
 
-      <div class="info-block">
-        <h2>How We Help</h2>
-        <ul class="emoji-list">
-          <li>✅ Identify and process emotional patterns</li>
-          <li>💚 Heal from emotional wounds and trauma</li>
-          <li>🌿 Build emotional resilience and mindfulness</li>
-          <li>✨ Feel more balanced, grounded, and at peace</li>
-        </ul>
-      </div>
+    <section>
+      <h2>What to Expect in a Session</h2>
+      <p>Each session at Tattva Mantra lasts approximately one hour, and is offered both online and in-person—flexibly scheduled to suit your convenience.</p>
+      <p>From the moment you enter the space—virtual or physical—you are met with warmth, empathy, and absolute non-judgment. We hold space for you in a way that makes you feel seen, heard, and accepted.</p>
+      <p>These aren’t just conversations. They’re a guided journey toward clarity, balance, and emotional freedom, where your thoughts are untangled and your emotions are gently unpacked.</p>
+    </section>
+
+    <section>
+      <h2>Who Is This For?</h2>
+      <ul>
+        <li>Teenagers navigating emotional challenges</li>
+        <li>Working professionals dealing with burnout and pressure</li>
+        <li>Stay-at-home parents facing mental fatigue or loneliness</li>
+        <li>And anyone seeking emotional healing in the chaos of modern life</li>
+      </ul>
+      <p>No matter your background or struggle, we meet you where you are—and walk with you toward where you want to be.</p>
+    </section>
+
+    <section>
+      <h2>Issues We Help With</h2>
+      <ul>
+        <li>Emotional exhaustion</li>
+        <li>Overthinking and overwhelm</li>
+        <li>Relationship turbulence</li>
+        <li>Lack of self-worth</li>
+        <li>Inner conflict and confusion</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Why Choose Tattva Mantra?</h2>
+      <p>We’re not just counselors—we are researchers and seekers. Backed by deep academic expertise in mental health and neuroscience, we bring the latest advancements in psychology to the table. But we don’t stop there.</p>
+      <p>What sets us apart is our fusion of scientific precision with ancient depth—where data meets dhyana, and where your healing is guided not just by technique, but by timeless truth.</p>
+    </section>
+
+    <section>
+      <h2>What Clients Experience</h2>
+      <p>Our clients often describe a sense of lightness, as if they’ve shed emotional weight they didn’t know they were carrying. Many leave sessions feeling emotionally clear, mentally strong, and spiritually uplifted.</p>
+      <p>It’s not just therapy—it’s transformation.</p>
+    </section>
+
+    <section>
+      <h2>Let’s Take This Journey Together</h2>
+      <p>Your emotions are valid. Your healing is possible. Your clarity is closer than you think.</p>
+      <p><strong>Let’s take this journey together—start now.</strong></p>
     </section>
   </main>
 
-  <a
-    href="https://wa.me/917000122900"
-    class="whatsapp-float"
-    aria-label="Chat on WhatsApp"
-    target="_blank"
-    rel="noopener"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-      <path
-        d="M16 3C9.925 3 5 7.925 5 14c0 2.61.967 5.13 2.72 7.01L6 29l7.263-1.914a11.94 11.94 0 006.737 1.59c6.075 0 11-4.925 11-11S22.075 3 16 3zm0 20.25a8.433 8.433 0 01-4.348-1.237l-.31-.19-4.31 1.136 1.15-4.182-.2-.32a8.437 8.437 0 1111.03 3.263z"
-      />
-      <path
-        d="M21.464 18.38c-.297-.15-1.756-.867-2.03-.964-.273-.1-.472-.15-.67.15-.196.297-.758.964-.93 1.16-.17.196-.347.22-.644.075-.297-.15-1.254-.463-2.39-1.477-.883-.786-1.48-1.755-1.653-2.05-.172-.296-.018-.455.13-.604.134-.133.298-.347.446-.52.15-.172.2-.296.3-.494.1-.198.05-.37-.025-.52-.075-.15-.67-1.615-.92-2.212-.242-.58-.488-.5-.67-.51l-.573-.01c-.196 0-.52.074-.792.37-.27.296-1.03 1.007-1.03 2.45 0 1.443 1.054 2.84 1.2 3.04.15.198 2.07 3.16 5.02 4.43.702.303 1.248.484 1.675.62.703.226 1.344.194 1.85.118.565-.085 1.756-.717 2.005-1.408.247-.69.247-1.28.173-1.408-.074-.128-.27-.198-.57-.347z"
-      />
-    </svg>
-  </a>
-
   <footer>
-    &copy; 2025 Tattva Mantra. All rights reserved.
+    <p>&copy; 2025 Tattva Mantra. All rights reserved.</p>
   </footer>
+
+  <a href="https://wa.me/917000122900" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
 </body>
+
 </html>
