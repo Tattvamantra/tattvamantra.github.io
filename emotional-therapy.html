@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Emotional Therapy | Tattvamantra - Holistic Wellness" />
-  <title>Emotional Therapy - Tattvamantra</title>
+  <meta name="description" content="Emotional Therapy - Tattvamantra" />
+  <title>Emotional Therapy | Tattvamantra</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -17,54 +17,64 @@
       --text-dark: #333;
       --white: #fff;
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
     }
+
     body {
       background-color: var(--bg-light);
       color: var(--text-dark);
       line-height: 1.6;
     }
+
     header {
       background: var(--white);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: relative;
       z-index: 10;
     }
+
     header img {
       height: 50px;
     }
+
     nav ul {
       list-style: none;
       display: flex;
       gap: 1rem;
     }
+
     nav ul li {
       position: relative;
     }
+
     nav ul li:hover ul {
       display: block;
     }
+
     nav ul ul {
       display: none;
       position: absolute;
       top: 100%;
       left: 0;
       background: var(--white);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       z-index: 999;
     }
+
     nav ul ul li {
       padding: 0.5rem 1rem;
       white-space: nowrap;
     }
+
     .cta {
       background-color: var(--green);
       color: var(--white);
@@ -78,6 +88,7 @@
       text-decoration: none;
       font-size: 0.85rem;
     }
+
     .hero {
       position: relative;
       background: url('calm.png') center top / cover no-repeat;
@@ -86,39 +97,98 @@
       padding: 3rem 2rem 4rem;
       text-align: center;
       z-index: 1;
+      min-height: 400px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      min-height: 400px;
+      justify-content: center;
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
     }
+
     .hero h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
+
     .hero p {
       font-size: 1.2rem;
-      margin-bottom: 2rem;
       line-height: 1.4;
+      max-width: 700px;
+      margin: 0 auto;
     }
-    .content {
-      padding: 2rem;
+
+    section.content {
+      padding: 3rem 1.5rem;
       max-width: 900px;
       margin: auto;
     }
-    .content h2 {
-      color: var(--green);
+
+    section.content h2 {
+      font-size: 1.8rem;
+      color: var(--dark-green);
       margin-bottom: 1rem;
     }
-    .content p {
-      margin-bottom: 1.5rem;
+
+    section.content p {
+      margin-bottom: 1.2rem;
       font-size: 1rem;
     }
+
+    .call-to-action {
+      background-color: #e9f8f0;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .cta-container {
+      max-width: 400px;
+      margin: auto;
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .cta-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-quote {
+      font-size: 1rem;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-quote-sanskrit {
+      font-size: 0.95rem;
+      color: #444;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .cta-container h2 {
+      font-size: 1.5rem;
+      color: var(--dark-green);
+      margin-bottom: 1rem;
+    }
+
+    .cta-button {
+      background-color: var(--green);
+      color: var(--white);
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      display: inline-block;
+    }
+
     footer {
       background-color: var(--dark-green);
       color: var(--white);
       padding: 2rem;
     }
+
     footer .columns {
       display: flex;
       flex-wrap: wrap;
@@ -126,35 +196,43 @@
       justify-content: space-between;
       margin-bottom: 2rem;
     }
+
     footer h4 {
       margin-bottom: 1rem;
       font-weight: 600;
     }
+
     footer ul {
       list-style: none;
     }
+
     footer ul li {
       margin-bottom: 0.5rem;
     }
+
     footer ul li a {
       color: var(--white);
       text-decoration: none;
     }
+
     footer ul li a:hover {
       text-decoration: underline;
     }
+
     footer .bottom {
       text-align: center;
       font-size: 0.9rem;
       border-top: 1px solid #ffffff44;
       padding-top: 1rem;
     }
+
     .floating-whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
       z-index: 100;
     }
+
     .floating-whatsapp img {
       width: 55px;
       height: 55px;
@@ -206,24 +284,32 @@
 
   <section class="hero">
     <h1>Emotional Therapy</h1>
-    <p>Empowering You to Navigate Emotions and Thrive with Resilience</p>
+    <p>Empowering your emotional well-being with compassion, clarity, and care.</p>
   </section>
 
   <section class="content">
     <h2>Why Emotional Therapy Matters</h2>
-    <p>Emotional Therapy at Tattvamantra is designed to help individuals explore, understand, and heal their emotional world. Whether you're struggling with anxiety, grief, stress, or emotional overwhelm, we offer a safe, compassionate space to begin your healing journey.</p>
+    <p>At Tattvamantra, we understand that emotional pain is as real and impactful as physical discomfort. Our emotional therapy is designed to help you identify, explore, and heal from emotional struggles that may be affecting your relationships, work, or inner peace.</p>
 
-    <h2>What We Offer</h2>
-    <p>Our sessions focus on self-awareness, emotional regulation, and transformation. We use modern psychological techniques blended with mindfulness and holistic approaches tailored to your needs.</p>
+    <h2>Our Approach</h2>
+    <p>We combine evidence-based therapeutic methods with mindful practices rooted in empathy. Whether it's anxiety, grief, trauma, or relationship stress — we offer a safe, judgment-free space to help you navigate it.</p>
 
-    <h2>Who It's For</h2>
-    <p>This service is ideal for adults, teenagers, and individuals experiencing emotional distress, major life transitions, trauma recovery, or simply seeking clarity and balance.</p>
+    <h2>What to Expect</h2>
+    <ul>
+      <li>One-on-one confidential sessions</li>
+      <li>Therapies tailored to your emotional history and goals</li>
+      <li>Guided self-awareness, stress reduction, and resilience techniques</li>
+    </ul>
+  </section>
 
-    <h2>How It Works</h2>
-    <p>Sessions are typically 60 minutes long and conducted online or in person. The first session is a gentle introduction, where we understand your needs and build trust.</p>
-
-    <h2>Ready to Begin?</h2>
-    <p><a href="form.html" class="cta">Schedule Your First Consultation</a></p>
+  <section class="call-to-action">
+    <div class="cta-container">
+      <div class="cta-icon">🧘‍♀️</div>
+      <p class="cta-quote">"Your healing journey begins with a single step of self-awareness."</p>
+      <p class="cta-quote-sanskrit">"स्वस्थस्य स्वास्थ्य रक्षणं आतुरस्य विकार प्रशमनं च।"</p>
+      <h2>Ready to Begin?</h2>
+      <a href="form.html" class="cta-button">Schedule Your First Consultation</a>
+    </div>
   </section>
 
   <div class="floating-whatsapp">
@@ -270,4 +356,5 @@
     </div>
   </footer>
 </body>
+
 </html>
